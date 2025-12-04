@@ -47,12 +47,12 @@ def main():
             # Vectorize
             text_vectorized = cv.transform([clean_input])
 
-			if model_choice == "Logistic Regression":
-            	model = lr
-        	elif model_choice == "ANN":
-            	model = ann
+            if model_choice == "Logistic Regression":
+				model = lr
+			elif model_choice == "ANN":
+				model = ann
 			else:
-            	model = svm
+				model = svm
 
             # Predict
             prediction = model.predict(text_vectorized)[0]
@@ -73,5 +73,6 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
 
 
