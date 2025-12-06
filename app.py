@@ -7,7 +7,7 @@ import string
 # LOAD MODEL & VECTORIZER
 # ================================
 lr = joblib.load("logistic_model.joblib")
-ann = joblib.load("nb_model.joblib")
+nb = joblib.load("nb_model.joblib")
 svm = joblib.load("svm_model.joblib")
 cv = joblib.load("countvectorizer.joblib")
 
@@ -73,4 +73,5 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
 
