@@ -47,7 +47,7 @@ def main():
             # Vectorize
             text_vectorized = cv.transform([clean_input])
 
-	        if model_choice == "Logistic Regression":
+            if model_choice == "Logistic Regression":
                 model = lr
             elif model_choice == "Naive Bayes":
                 model = nb
@@ -73,3 +73,4 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
