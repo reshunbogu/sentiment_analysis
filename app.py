@@ -9,7 +9,7 @@ import string
 lr = joblib.load("logistic_model.joblib")
 nb = joblib.load("nb_model.joblib")
 svm = joblib.load("svm_model.joblib")
-stacking = joblib.load("countvectorizer.joblib")
+stacking = joblib.load("stacking_model.joblib")
 cv = joblib.load("countvectorizer.joblib")
 
 # ================================
@@ -76,6 +76,7 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
 
 
 
