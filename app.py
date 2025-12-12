@@ -9,6 +9,7 @@ import string
 lr = joblib.load("logistic_model.joblib")
 nb = joblib.load("nb_model.joblib")
 svm = joblib.load("svm_model.joblib")
+stacking = joblib.load("countvectorizer.joblib")
 cv = joblib.load("countvectorizer.joblib")
 
 # ================================
@@ -33,7 +34,7 @@ def main():
     # Model Selection
     model_choice = st.selectbox(
         "Choose a model:",
-        ("Logistic Regression", "Naive Bayes", "SVM")
+        ("Logistic Regression", "Naive Bayes", "SVM", "Stacking")
     )
 
     user_input = st.text_area("Enter your text here:")
@@ -51,8 +52,10 @@ def main():
                 model = lr
             elif model_choice == "Naive Bayes":
                 model = nb
-            else:
+            elif model_choice == "SVM":
                 model = svm
+            else:
+                model = stacking
 
             # Predict
             prediction = model.predict(text_vectorized)[0]
@@ -73,5 +76,6 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
 
 
