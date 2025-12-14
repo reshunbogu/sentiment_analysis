@@ -77,6 +77,14 @@ def load_models():
 
 models, cv = load_models()
 
+# Precomputed weighted metrics for each model
+weighted_metrics = {
+    "Logistic Regression": {"F1": 0.690, "Precision": 0.691, "Recall": 0.690},
+    "Naive Bayes": {"F1": 0.651, "Precision": 0.651, "Recall": 0.651},
+    "SVM": {"F1": 0.709, "Precision": 0.710, "Recall": 0.709},
+    "Stacking": {"F1": 0.717, "Precision": 0.718, "Recall": 0.717}
+}
+
 # ================================
 # TEXT CLEANING FUNCTION
 # ================================
@@ -117,6 +125,14 @@ def sidebar_config():
         "Stacking": "Ensemble method combining multiple models"
     }
     st.sidebar.info(model_info[model_choice])
+
+    # Weighted Metrics
+    st.sidebar.subheader("📊 Weighted Metrics")
+    metrics = weighted_metrics[model_choice]
+    st.sidebar.write(f"**F1 Score:** {metrics['F1']:.3f}")
+    st.sidebar.write(f"**Precision:** {metrics['Precision']:.3f}")
+    st.sidebar.write(f"**Recall:** {metrics['Recall']:.3f}")
+    
     return model_choice
 
 # ================================
@@ -186,3 +202,4 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
