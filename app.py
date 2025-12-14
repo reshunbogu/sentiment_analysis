@@ -129,9 +129,9 @@ def sidebar_config():
     # Weighted Metrics
     st.sidebar.subheader("📊 Weighted Metrics")
     metrics = weighted_metrics[model_choice]
-    st.sidebar.write(f"**F1 Score:** {metrics['F1']:.3f}")
-    st.sidebar.write(f"**Precision:** {metrics['Precision']:.3f}")
-    st.sidebar.write(f"**Recall:** {metrics['Recall']:.3f}")
+    st.sidebar.write(f"**F1 Score:** {metrics['F1']:.4f}")
+    st.sidebar.write(f"**Precision:** {metrics['Precision']:.4f}")
+    st.sidebar.write(f"**Recall:** {metrics['Recall']:.4f}")
     
     return model_choice
 
@@ -202,5 +202,6 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
 
 
