@@ -79,10 +79,10 @@ models, cv = load_models()
 
 # Precomputed weighted metrics for each model
 weighted_metrics = {
-    "Logistic Regression": {"F1": 0.690, "Precision": 0.691, "Recall": 0.690},
-    "Naive Bayes": {"F1": 0.651, "Precision": 0.651, "Recall": 0.651},
-    "SVM": {"F1": 0.709, "Precision": 0.710, "Recall": 0.709},
-    "Stacking": {"F1": 0.717, "Precision": 0.718, "Recall": 0.717}
+    "Logistic Regression": {"F1": 0.6902, "Precision": 0.6938, "Recall": 0.6905},
+    "Naive Bayes": {"F1": 0.6507, "Precision": 0.6614, "Recall": 0.6518},
+    "SVM": {"F1": 0.7090, "Precision": 0.7187, "Recall": 0.7100},
+    "Stacking": {"F1": 0.7171, "Precision": 0.7279, "Recall": 0.7179}
 }
 
 # ================================
@@ -202,4 +202,5 @@ def main():
 # ================================
 if __name__ == "__main__":
     main()
+
 
